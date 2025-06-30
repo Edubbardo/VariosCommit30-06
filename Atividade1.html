@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que fiz no word</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <style>
+        .condeu{
+            opacity: 0%;
+            z-index: -100;
+        }
+        body{
+            background-color: rgb(173, 173, 173);
+            overflow-x: hidden;
+        }
+        li{
+            margin-top:10px;
+            font-size:large;
+        }
+        button{
+            background-color: black;
+            border: none;
+            cursor:pointer;
+            color:orangered;
+            padding:8px;
+            font-size:x-large;
+            border-radius:100px;
+        }
+        button:hover{
+            background-color: rgb(192, 192, 192);
+            color:blue
+        }
+        header{
+            display:flex;
+            justify-content: space-between;
+            position: absolute;
+            top:0px;
+            left:0px;
+            background-color: rgb(0, 0, 0);
+            width: 100%;
+        }
+        .h1header{
+            margin:0px;
+            font-size:28px;
+            padding:8px;
+            color:white;
+        }
+        a{
+            text-decoration-color: blue;
+            color:white;
+        }
+        a:hover{
+            color:limegreen;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3 style="color:red;margin:0px;font-size:xx-large; margin-top:4px;margin-left:15px;">Atv 1</h3>
+        <h2 class="h1header" style="margin-left:-150px"><a style="text-decoration: underline;text-decoration-color:blue; cursor: pointer;" onclick="Final()">Atividade anterior</a></h2>
+        <h2 class="h1header"><a href="home.html">Voltar ao Menu de atividades</a></h2>
+        <h2 class="h1header" style="margin-right:-150px"><a href="Atividade2.html">Atividade Posterior</a></h2>
+        <h3 style="color:red;margin:0px;font-size:xx-large; margin-top:4px;margin-right:15px;">Atv 1</h3>
+    </header>
+    <br>
+    <img id="resultadoF2" src="Imagens/powerpoint.png" class="condeu" style="position: absolute; width: 1275px; margin-left:610px;margin-top:100px;">
+    <img id="resultadoF" src="Imagens/manoeis.png" class="condeu" style="position: absolute;width: 1200px;margin-left:640px; top:75px;">
+    <h1 style="text-align: center;">Atividade sobre o que fiz no word</h1>
+    <section style="background-color: white;border-radius:30px;padding:2px;width: 500px; margin-left:55px;">
+        <ul style="list-style-type: none;">
+        <li><h2>Instruções que foram dadas:</h2></li>
+        <li>Criar um arquivo <b>Word</b> e um <b>Powerpoint</b> que tivesse:</li>   
+        <li>Wordart;</li>
+        <li>Caixa de Texto;</li>
+        <li>Tabela C/ Borda/ Preenchimento;</li>
+        <li>Numeração nas páginas;</li>
+        <li>Cabeçalho(IMAGEM);</li>
+        <li>Rodapé(À seu critério);</li>
+        <li>N.I.S, efeitos de texto;</li>
+        <li>Inserir letra Capitular;</li>
+        <li>Arte da Borda da Página;</li>
+        <li>Marca D'água(À seu critério);</li>
+        <li style="margin-top:0px;"><h4>Texto</h4></li>
+        <li style="margin-top:-15px;">Título - 2025: O ano da transformação<br><span style="margin-left:85px;">Profissional e Pessoal</span></li>
+        <li>Conteúdo - Comentar sobre o que eu espero do meu 2025.</li>
+    </ul>
+    </section>
+    <section style="background-color: white;border-radius:25px; width: 570px;margin-left:10px; padding:8px;margin-top:60px;">
+    <h3 style="margin-left:38px;">Segui as instruções e fiz 2 arquivos com tudo que me foi pedido,<br> clique nos botões abaixo caso deseje dar uma olhada.</h3>
+    <button style="position: relative; bottom:px; left:40px;" onclick="Mostrar()">Ver o resultado do Word</button><br><br>
+    <button style="position: relative; bottom:px; left:40px;" onclick="Mostrar2()">Ver o resultado do Powerpoint</button>
+    </section>
+    <script>
+        let resultadoF = document.getElementById('resultadoF')
+        let resultadoF2 = document.getElementById('resultadoF2')
+        let cont1 = 0
+        function Mostrar(){
+            cont1++
+            if(cont1 %2 === 0){
+                resultadoF.classList.add('condeu')
+            }else{
+                resultadoF.classList.remove('condeu')
+                resultadoF2.classList.add('condeu')
+                if(cont2 % 2 !== 0){
+                    cont2++;
+                }
+            }
+        }
+        let cont2 = 0
+        function Mostrar2(){
+            cont2++
+            if(cont2 %2 === 0){
+                resultadoF2.classList.add('condeu')
+            }else{
+                resultadoF2.classList.remove('condeu')
+                resultadoF.classList.add('condeu')
+                if(cont1 % 2 !== 0){
+                    cont1++;
+                }
+            }
+        }
+        function Final(){
+            Swal.fire({
+            title: "Erro!",
+            html: "Não há atividade anterior a essa!<br>Tente voltar ao menu para escolher outra.",
+            icon: "error"
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <title>Menu</title>
+    <style>
+        .botquad{
+            background-color: white;
+            padding:40px;
+            font-size:xx-large;
+            cursor: pointer;
+        }
+        .botquad:hover{
+            transition:ease;
+            transform: scale(1.2);
+            background-color: rgb(26, 26, 26);
+            color:white;
+        }
+        .botoes{
+            display: flex;
+            flex-wrap: wrap;
+            width: 830px;
+            gap:50px;
+        }
+    </style>
+</head>
+<body style="background-image: url(Imagens/estrelas.webp);display:flex;justify-content: center;">
+    <h1 style="color:Red; position: absolute; top:50px;">Menu de atividades</h1>
+    <div class="botoes" style="margin-top:240px">
+        <a href="Atividade1.html"><button class="botquad">Atividade 1</button></a>
+        <a href="Atividade2.html"><button class="botquad">Atividade 2</button></a>
+        <button class="botquad" onclick="NaoAdc()">Atividade 3</button>
+        <button class="botquad" onclick="NaoAdc()">Atividade 4</button>
+        <button class="botquad" onclick="NaoAdc()">Atividade 5</button>
+        <button class="botquad" onclick="NaoAdc()">Atividade 6</button>
+        <button class="botquad" onclick="NaoAdc()">Atividade 7</button>
+        <button class="botquad" onclick="NaoAdc()">Atividade 8</button>
+        <button class="botquad" onclick="NaoAdc()">Atividade 9</button>
+    </div>
+    <script>
+        function NaoAdc(){
+            Swal.fire({
+            title: "Erro!",
+            html: "Ainda não foi adicionada nenhuma atividade aqui!",
+            icon: "error"
+            });      
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
